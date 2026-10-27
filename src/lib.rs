@@ -140,3 +140,5 @@ mod tests {
         assert_eq!(greet("  Ada  "), "Hello, Ada!");
     }
 }
+
+pub mod auth;
