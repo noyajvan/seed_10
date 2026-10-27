@@ -1,0 +1,26 @@
+[package]
+name = "seed_10"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Стартовий каркас Rust-проєкту: тонкий main + тестована бібліотека"
+license = "MIT"
+
+[dependencies]
+
+[lints.rust]
+unsafe_code = "forbid"
+missing_debug_implementations = "warn"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+module_name_repetitions = "allow"
+missing_errors_doc = "allow"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
